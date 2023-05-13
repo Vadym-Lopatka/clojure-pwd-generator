@@ -3,8 +3,8 @@
 Сommand-line tool for password generation.
 
 - generates a password of a given length (12 by default) 
-- copies the result to the clipboard and 
-- prints to the console 
+- copies the result to the clipboard
+- prints the result to the console 
 
 ## Usage
 
@@ -18,7 +18,7 @@ Run the project with custom password length via `-l` option:
     $ clojure -M:run-m -l 8 
     Generated password is: w2PGeT4G
 
-## Build for CI or uberjar
+## Uberjar build
 Run the project's CI pipeline and build an uberjar (this will fail until you edit the tests to pass):
 
     $ clojure -T:build ci
