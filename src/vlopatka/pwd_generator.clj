@@ -14,7 +14,8 @@
 (defn generate-new-password [length]
   (let [pwd (generate-password length)]
     (copy pwd)
-    (println pwd)))
+    (println 
+     (str "Generated password is: " pwd "\nAlso copied to clipboard"))))
 
 
 (defn -main
@@ -27,4 +28,3 @@
     (if (:help options)
       (println summary)
       (generate-new-password (:length options)))))
-
