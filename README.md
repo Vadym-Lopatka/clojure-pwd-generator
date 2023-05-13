@@ -6,6 +6,9 @@
 - copies the result to the clipboard
 - prints the result to the console 
 
+Inspired by tutorial:
+https://youtu.be/nnFq2nVKxuw
+
 ## Usage
 
 Run the project with default password length(12):
