@@ -1,10 +1,8 @@
-(ns vlopatka.password)
+(ns vlopatka.password
+  (:require [clojure.string :as str]))
 
-(def available-chars (reduce (fn [acc val] 
-                               (str acc (char val))) "" (range 33 123)))
+(def available-chars
+  (map char (range 33 123)))
 
 (defn generate-password [length]
-  (loop [password ""]
-    (if (= (count password) length)
-     password
-     (recur (str password (rand-nth available-chars))))))
+  (str/join (repeatedly length #(rand-nth available-chars))))
