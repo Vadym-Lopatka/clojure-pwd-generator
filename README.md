@@ -1,39 +1,24 @@
 # pwd-generator
 
-FIXME: my new application.
+Сommand-line tool for password generation.
 
-## Installation
-
-Download from https://github.com/vlopatka/pwd-generator
+- generates a password of a given length (12 by default) 
+- copies the result to the clipboard and 
+- prints to the console 
 
 ## Usage
 
-FIXME: explanation
+Run the project with default password length(12):
 
-Run the project directly, via `:exec-fn`:
+    $ clojure -M:run-m 
+    Generated password is: 9+3'=A.@e3,7
 
-    $ clojure -X:run-x
-    Hello, Clojure!
+Run the project with custom password length via `-l` option:
 
-Run the project, overriding the name to be greeted:
+    $ clojure -M:run-m -l 8 
+    Generated password is: w2PGeT4G
 
-    $ clojure -X:run-x :name '"Someone"'
-    Hello, Someone!
-
-Run the project directly, via `:main-opts` (`-m vlopatka.pwd-generator`):
-
-    $ clojure -M:run-m
-    Hello, World!
-
-Run the project, overriding the name to be greeted:
-
-    $ clojure -M:run-m Via-Main
-    Hello, Via-Main!
-
-Run the project's tests (they'll fail until you edit them):
-
-    $ clojure -T:build test
-
+## Build for CI or uberjar
 Run the project's CI pipeline and build an uberjar (this will fail until you edit the tests to pass):
 
     $ clojure -T:build ci
@@ -48,25 +33,9 @@ from `build.clj`.
 
 Run that uberjar:
 
-    $ java -jar target/pwd-generator-0.1.0-SNAPSHOT.jar
+    $ java -jar target/pwd-generator-0.1.0-SNAPSHOT.jar -l 10
 
 If you remove `version` from `build.clj`, the uberjar will become `target/pwd-generator-standalone.jar`.
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
